@@ -8,7 +8,7 @@ Die Website zeigt, wie sich conversion-orientiertes Webdesign, redaktionelle Ges
 
 ## Designansatz
 
-Die Gestaltung verbindet dunkles Graphit, warmes Weiß und ein kontrolliert eingesetztes Energiegrün. Großzügige Typografie, asymmetrische Bildaufteilungen, redaktionelle Projektlayouts und reduzierte Linienraster erzeugen Rhythmus, ohne in typische SaaS- oder KI-Landingpage-Muster zu fallen. Die drei Bildwelten wurden eigens für das Konzept erstellt und über alle Routen hinweg konsistent eingesetzt.
+Die Gestaltung verbindet dunkles Graphit, warmes Weiß und ein kontrolliert eingesetztes Energiegrün. Großzügige Typografie, asymmetrische Bildaufteilungen, redaktionelle Projektlayouts und reduzierte Linienraster erzeugen Rhythmus, ohne in typische SaaS- oder KI-Landingpage-Muster zu fallen. Zehn reale, lizenzsicher nutzbare Unsplash-Fotografien prägen die Bildwelt; Herkunft und Lizenzhinweise sind in [IMAGE_SOURCES.md](./IMAGE_SOURCES.md) dokumentiert. Für die Website liegen die Motive lokal als optimierte WebP-Dateien in mehreren responsiven Größen vor.
 
 ## Technologie
 
@@ -43,7 +43,7 @@ Semantische Landmarken, eine konsistente Überschriftenhierarchie, sichtbare Fok
 
 ## Leistung und SEO
 
-Die Website nutzt Server Components, wo kein Browserzustand benötigt wird. Bilder werden über `next/image` responsiv eingebunden. JavaScript bleibt auf die notwendigen Interaktionen begrenzt. Alle Hauptseiten besitzen deutsche Titel und Beschreibungen; Sitemap, Robots-Regeln und strukturierte interne Verlinkungen ergänzen die SEO-Basis.
+Die Website nutzt Server Components, wo kein Browserzustand benötigt wird. Lokale WebP-Dateien mit responsiven `srcset`-Varianten vermeiden unnötig große Bildübertragungen. JavaScript bleibt auf die notwendigen Interaktionen begrenzt. Alle Hauptseiten besitzen deutsche Titel, Beschreibungen, kanonische URLs und seitenbezogene Social-Metadaten; Sitemap, Robots-Regeln und strukturierte interne Verlinkungen ergänzen die SEO-Basis.
 
 ## Lokale Installation
 

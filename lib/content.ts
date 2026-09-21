@@ -2,12 +2,12 @@ export type ProjectCategory = "Photovoltaik" | "Speicher" | "Wallbox";
 export type Project = { title: string; location: string; category: ProjectCategory; size: string; storage?: string; description: string; image: string };
 
 export const projects: Project[] = [
-  { title: "Satteldach mit Südausrichtung", location: "Gütersloh", category: "Photovoltaik", size: "11,2 kWp", storage: "10 kWh Speicher", description: "Ruhige, dachparallele Belegung für ein saniertes Einfamilienhaus mit hohem Eigenverbrauch.", image: "/images/hero-home.png" },
-  { title: "Energie für Haus und E-Auto", location: "Paderborn", category: "Wallbox", size: "13,8 kWp", storage: "11 kWh Speicher", description: "Abgestimmtes System aus Photovoltaik, Speicher und dynamisch gesteuerter Wallbox.", image: "/images/energy-system.png" },
-  { title: "Klare Fläche, starke Leistung", location: "Bielefeld", category: "Photovoltaik", size: "9,6 kWp", description: "Schwarz gerahmte Module, exakt auf die Dachgeometrie und den Strombedarf abgestimmt.", image: "/images/solar-installation.png" },
-  { title: "Mehr Eigenverbrauch im Alltag", location: "Münster", category: "Speicher", size: "8,4 kWp", storage: "8 kWh Speicher", description: "Kompakte Speicherlösung für Abendverbrauch, Wärmepumpe und verlässliche Energiereserven.", image: "/images/energy-system.png" },
-  { title: "Solaranlage für den Familienbetrieb", location: "Soest", category: "Photovoltaik", size: "24,5 kWp", description: "Leistungsorientierte Dachplanung für einen kleinen Handwerksbetrieb mit Tageslastprofil.", image: "/images/solar-installation.png" },
-  { title: "Sonnenstrom für zwei Fahrzeuge", location: "Detmold", category: "Wallbox", size: "15,1 kWp", storage: "13 kWh Speicher", description: "Lastmanagement und zwei Ladepunkte für planbare Mobilität aus eigener Erzeugung.", image: "/images/hero-home.png" },
+  { title: "Satteldach mit Südausrichtung", location: "Gütersloh", category: "Photovoltaik", size: "11,2 kWp", storage: "10 kWh Speicher", description: "Ruhige, dachparallele Belegung für ein saniertes Einfamilienhaus mit hohem Eigenverbrauch.", image: "/images/project-guetersloh.webp" },
+  { title: "Energie für Haus und E-Auto", location: "Paderborn", category: "Wallbox", size: "13,8 kWp", storage: "11 kWh Speicher", description: "Abgestimmtes System aus Photovoltaik, Speicher und dynamisch gesteuerter Wallbox.", image: "/images/project-paderborn.webp" },
+  { title: "Klare Fläche, starke Leistung", location: "Bielefeld", category: "Photovoltaik", size: "9,6 kWp", description: "Schwarz gerahmte Module, exakt auf die Dachgeometrie und den Strombedarf abgestimmt.", image: "/images/project-bielefeld.webp" },
+  { title: "Mehr Eigenverbrauch im Alltag", location: "Münster", category: "Speicher", size: "8,4 kWp", storage: "8 kWh Speicher", description: "Kompakte Speicherlösung für Abendverbrauch, Wärmepumpe und verlässliche Energiereserven.", image: "/images/project-muenster.webp" },
+  { title: "Solaranlage für den Familienbetrieb", location: "Soest", category: "Photovoltaik", size: "24,5 kWp", description: "Leistungsorientierte Dachplanung für einen kleinen Handwerksbetrieb mit Tageslastprofil.", image: "/images/project-soest.webp" },
+  { title: "Sonnenstrom für zwei Fahrzeuge", location: "Detmold", category: "Wallbox", size: "15,1 kWp", storage: "13 kWh Speicher", description: "Lastmanagement und zwei Ladepunkte für planbare Mobilität aus eigener Erzeugung.", image: "/images/project-detmold.webp" },
 ];
 
 export const faqs = [

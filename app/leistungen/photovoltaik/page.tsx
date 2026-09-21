@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage } from "@/components/responsive-image";
 import Link from "next/link";
-import { ArrowRight, Check, Compass, PanelsTopLeft, PlugZap, SunMedium } from "lucide-react";
+import { ArrowRight, ChartNoAxesCombined, Check, Construction, PlugZap, SolarPanel } from "lucide-react";
 import { CtaSection } from "@/components/cta-section";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { faqs } from "@/lib/content";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Photovoltaik",
-  description: "Individuell geplante Photovoltaikanlagen für Eigenheime und kleine Betriebe in Nordrhein-Westfalen.",
-};
+export const metadata = createPageMetadata({ title: "Photovoltaik", description: "Individuell geplante Photovoltaikanlagen für Eigenheime und kleine Betriebe in Nordrhein-Westfalen.", path: "/leistungen/photovoltaik" });
 
 const steps = [
   ["01", "Dach verstehen", "Ausrichtung, Fläche, Statik und Verschattung erfassen."],
@@ -21,10 +18,10 @@ const steps = [
 ];
 
 const components = [
-  { Icon: PanelsTopLeft, title: "Module", copy: "Leistungsstark, belastbar und passend zur sichtbaren Dachfläche." },
+  { Icon: SolarPanel, title: "Module", copy: "Leistungsstark, belastbar und passend zur sichtbaren Dachfläche." },
   { Icon: PlugZap, title: "Wechselrichter", copy: "Effiziente Umwandlung und verlässliche Systemüberwachung." },
-  { Icon: SunMedium, title: "Montagesystem", copy: "Auf Dachdeckung, Windlast und langfristige Dichtigkeit abgestimmt." },
-  { Icon: Compass, title: "Monitoring", copy: "Erzeugung und Verbrauch verständlich im Blick behalten." },
+  { Icon: Construction, title: "Montagesystem", copy: "Auf Dachdeckung, Windlast und langfristige Dichtigkeit abgestimmt." },
+  { Icon: ChartNoAxesCombined, title: "Monitoring", copy: "Erzeugung und Verbrauch verständlich im Blick behalten." },
 ];
 
 export default function PhotovoltaicPage() {
@@ -33,7 +30,7 @@ export default function PhotovoltaicPage() {
       <PageHero eyebrow="Photovoltaik" title="Ihr Dach kann mehr." copy="Wir übersetzen Dachfläche und Verbrauch in eine langlebige Anlage – sorgfältig dimensioniert, sauber gestaltet und auf künftige Anforderungen vorbereitet." label="Von der Dachanalyse bis zur Inbetriebnahme" />
       <section className="section">
         <div className="shell editorial-section">
-          <div className="image-frame editorial-image"><Image src="/images/hero-home.png" alt="Einfamilienhaus mit flächenbündig geplanter Photovoltaikanlage" fill priority sizes="(max-width: 640px) 100vw, 50vw" /></div>
+          <div className="image-frame editorial-image"><ResponsiveImage src="/images/project-bielefeld.webp" alt="Einfamilienhaus mit flächenbündig geplanter Photovoltaikanlage" priority sizes="(max-width: 640px) 100vw, 50vw" /></div>
           <div>
             <p className="eyebrow">Mehr als Module</p>
             <h2 className="headline">Eine Anlage, die zu Haus und Alltag passt.</h2>
@@ -55,7 +52,7 @@ export default function PhotovoltaicPage() {
       </section>
       <section className="section">
         <div className="shell editorial-section reverse">
-          <div className="image-frame editorial-image"><Image src="/images/solar-installation.png" alt="Photovoltaikmodule während der fachgerechten Montage" fill sizes="(max-width: 640px) 100vw, 50vw" /></div>
+          <div className="image-frame editorial-image"><ResponsiveImage src="/images/solar-installation.webp" alt="Photovoltaikmodule während der fachgerechten Montage" sizes="(max-width: 640px) 100vw, 50vw" /></div>
           <div className="editorial-copy"><p className="eyebrow">Praxis</p><h2 className="headline">Was ein gutes Angebot erkennbar macht.</h2><p className="lead">Vergleichen Sie nicht nur kWp und Preis. Entscheidend sind belegte Annahmen, eine passende Komponentenwahl, klare Zuständigkeiten und die Frage, wie das System später erweitert werden kann.</p><div className="button-row"><Link className="text-link" href="/projekte">Passende Projekte ansehen <ArrowRight aria-hidden="true" /></Link></div></div>
         </div>
       </section>
