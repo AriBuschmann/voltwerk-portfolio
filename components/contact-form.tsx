@@ -24,6 +24,7 @@ export function ContactForm() {
     if (!values.firstName.trim()) next.firstName = "Bitte geben Sie Ihren Vornamen ein.";
     if (!values.lastName.trim()) next.lastName = "Bitte geben Sie Ihren Nachnamen ein.";
     if (!/^\S+@\S+\.\S+$/.test(values.email)) next.email = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+    if (!values.phone.trim()) next.phone = "Bitte geben Sie Ihre Telefonnummer ein.";
     if (!values.projectType) next.projectType = "Bitte wählen Sie eine Projektart aus.";
     if (!/^\d{5}$/.test(values.postalCode)) next.postalCode = "Bitte geben Sie eine fünfstellige Postleitzahl ein.";
     if (values.message.trim().length < 10) next.message = "Bitte beschreiben Sie Ihr Vorhaben in mindestens zehn Zeichen.";
@@ -44,7 +45,7 @@ export function ContactForm() {
   };
 
   return <form ref={formRef} noValidate onSubmit={submit}><div className="form-grid">
-    {field("firstName", "Vorname")}{field("lastName", "Nachname")}{field("email", "E-Mail", "email")}{field("phone", "Telefon", "tel", false)}
+    {field("firstName", "Vorname")}{field("lastName", "Nachname")}{field("email", "E-Mail", "email")}{field("phone", "Telefon", "tel")}
     <div className="field"><label htmlFor="projectType"><RequiredLabel>Projektart</RequiredLabel></label><select className={`select-native ${errors.projectType ? "input-error" : ""}`} id="projectType" name="projectType" value={values.projectType} required aria-required="true" aria-invalid={Boolean(errors.projectType)} aria-describedby={errors.projectType ? "projectType-error" : undefined} onChange={(event) => update("projectType", event.target.value)}><option value="">Bitte auswählen</option><option>Photovoltaik</option><option>Photovoltaik + Speicher</option><option>Wallbox</option><option>Energiemanagement</option><option>Sonstiges</option></select>{errors.projectType && <p className="error-text" id="projectType-error" role="alert">{errors.projectType}</p>}</div>
     {field("postalCode", "Postleitzahl")}
     <div className="field field-full"><label htmlFor="message"><RequiredLabel>Nachricht</RequiredLabel></label><textarea className={`textarea ${errors.message ? "input-error" : ""}`} id="message" name="message" value={values.message} required aria-required="true" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? "message-error" : undefined} onChange={(event) => update("message", event.target.value)} />{errors.message && <p className="error-text" id="message-error" role="alert">{errors.message}</p>}</div>

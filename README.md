@@ -17,7 +17,7 @@ Die Gestaltung verbindet dunkles Graphit, warmes Weiß und ein kontrolliert eing
 - Tailwind CSS als Basis, ergänzt durch projektspezifische Design-Tokens und CSS
 - Lucide Icons
 - Radix-basierte UI-Primitiven für Accordion und Checkbox
-- Vinext/Vite-Build für die Cloudflare-kompatible Sites-Laufzeit
+- Native Next.js-Laufzeit für lokale Entwicklung und Vercel-Deployments
 
 ## Architektur
 

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://voltwerk-energie.ari-buschmann.chatgpt.site";
+const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+
+export const siteUrl = productionHost
+  ? `https://${productionHost}`
+  : "https://voltwerk-energie.ari-buschmann.chatgpt.site";
 
 type PageMetadata = {
   title: string;
@@ -12,7 +16,7 @@ export function createPageMetadata({ title, description, path }: PageMetadata): 
   const socialTitle = `${title} | VOLTWERK`;
 
   return {
-    title,
+    title: path === "/" ? { absolute: socialTitle } : title,
     description,
     alternates: { canonical: path },
     openGraph: {
