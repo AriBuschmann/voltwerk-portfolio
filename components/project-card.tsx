@@ -1,0 +1,3 @@
+import Image from "next/image";
+import type { Project } from "@/lib/content";
+export function ProjectCard({ project }: { project: Project }) { return <article className="project-card"><div className="image-frame project-image"><Image src={project.image} alt={`${project.category}-Projekt in ${project.location}`} fill sizes="(max-width: 700px) 100vw, 50vw" /></div><div><div className="project-meta"><span>{project.location}</span><span>{project.category}</span><span>{project.size}</span>{project.storage && <span>{project.storage}</span>}</div><h3>{project.title}</h3><p>{project.description}</p></div></article>; }

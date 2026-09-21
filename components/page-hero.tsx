@@ -1,0 +1,1 @@
+export function PageHero({ eyebrow, title, copy, label }: { eyebrow: string; title: string; copy: string; label: string }) { return <section className="page-hero"><div className="shell page-hero-grid"><div><p className="eyebrow">{eyebrow}</p><h1 className="display">{title}</h1><p className="lead">{copy}</p></div><div className="page-label">{label}</div></div></section>; }

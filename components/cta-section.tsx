@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+export function CtaSection() { return <section className="cta-section" aria-labelledby="cta-title"><div className="shell cta-grid"><div><p className="eyebrow">Nächster Schritt</p><h2 className="headline" id="cta-title">Bereit für Ihre eigene Energie?</h2><p className="lead">Erzählen Sie uns von Ihrem Haus und Ihren Plänen. Wir melden uns persönlich und klären, was sinnvoll ist.</p></div><Link className="button button-dark" href="/kontakt">Kostenlose Beratung anfragen <ArrowUpRight aria-hidden="true" /></Link></div></section>; }
